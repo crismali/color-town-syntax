@@ -63,18 +63,34 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 
 .comment {
-  color: @light-gray;
+  color: @pink;
 }
 
 .keyword {
   color: @purple;
 
   &.control {
-    color: @purple;
+    color: @aqua;
+
+    &.conditional {
+      color: lighten(@dark-purple, 20%);
+    }
+
+    &.flow {
+      color: @light-orange;
+    }
+
+    &.module {
+      color: lighten(@aqua, 25%);
+    }
   }
 
   &.operator {
     color: @syntax-text-color;
+
+    &.ternary {
+      color: lighten(@dark-purple, 20%);
+    }
   }
 
   &.other.special-method {
@@ -86,8 +102,22 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 }
 
+.JSXNested {
+  color: @very-light-gray;
+}
+
 .storage {
-  color: @purple;
+  color: @aqua;
+
+  &.type {
+    &.class, &.extends {
+      color: lighten(@red, 10%);
+    }
+
+    &.function {
+      color: lighten(@blue, 20%);
+    }
+  }
 }
 
 .constant {
@@ -98,7 +128,7 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 
   &.numeric {
-    color: @orange;
+    color: lighten(@aqua, 15%);
   }
 
   &.other.color {
@@ -145,12 +175,23 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 
 .punctuation {
+  &.key-value {
+    color: @light-orange;
+  }
+
   &.definition {
-    &.comment {
-      color: @light-gray;
+    &.tag {
+      color: darken(@dark-aqua, 5%);
     }
 
-    &.string,
+    &.comment {
+      color: @pink;
+    }
+
+    &.string {
+      color: @green;
+    }
+
     &.variable,
     &.parameters,
     &.array {
@@ -174,7 +215,7 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 
   &.section.embedded {
-    color: darken(@red, 10%);
+    color: @light-orange;
   }
 
 }
@@ -195,7 +236,7 @@ atom-text-editor .search-results .marker.current-result .region,
 
 .entity {
   &.name.function {
-    color: @blue;
+    color: @orange;
   }
   &.name.type {
     color: @light-orange;
@@ -206,7 +247,7 @@ atom-text-editor .search-results .marker.current-result .region,
     color: @green;
   }
   &.name.class, &.name.type.class {
-    color: @light-orange;
+    color: lighten(@green, 15%);
   }
 
   &.name.section {
@@ -214,12 +255,12 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 
   &.name.tag {
-    color: @red;
-    text-decoration: underline;
+    color: @dark-aqua;
+    text-decoration: none;
   }
 
   &.other.attribute-name {
-    color: @orange;
+    color: darken(@blue, 10%);
 
     &.id {
       color: @blue;
@@ -228,6 +269,10 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 
 .meta {
+  &.brace {
+    color: @light-orange;
+  }
+
   &.class {
     color: @light-orange;
   }
