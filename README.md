@@ -2,4 +2,4 @@
 
 A theme that isn't washed out.
 
-![A screenshot of color town syntax theme](/color-town-example.png)
+![A screenshot of color town syntax theme](https://raw.githubusercontent.com/crismali/color-town-syntax/master/color-town-example.png)
